@@ -37,10 +37,12 @@ class HomePage extends StatelessWidget {
                   context.text.homePageWelcomeText("Francesco"),
                   style: headerStyle,
                 ),
+                //TODO: Logic
                 MainPageInfoWidget(
                   title: context.text.homePageWidgetGood,
                   subtitle: context.text.homePageWidgetSubTitle,
                   points: context.text.homePageWidgetPoints(2040),
+                  color: BBColors.greenStatus,
                 ),
                 Text(
                   context.text.homePageTodaySession,

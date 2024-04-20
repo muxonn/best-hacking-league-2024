@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,11 +8,13 @@ class MainPageInfoWidget extends StatelessWidget {
       {super.key,
       required this.title,
       required this.subtitle,
-      required this.points});
+      required this.points,
+      required this.color});
 
   final String title;
   final String subtitle;
   final String points;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class MainPageInfoWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: BBColors.deepPurple,
+        color: color,
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.5),
