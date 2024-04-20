@@ -40,4 +40,16 @@ class AppLocalizationsPl extends AppLocalizations {
   String homePageWidgetPoints(int points) {
     return '$points punktów';
   }
+
+  @override
+  String get februaryShort => 'Lut';
+
+  @override
+  String get marchShort => 'Mar';
+
+  @override
+  String get aprilShort => 'Kwi';
+
+  @override
+  String get points => 'punkty';
 }

@@ -158,6 +158,30 @@ abstract class AppLocalizations {
   /// In pl, this message translates to:
   /// **'{points} punktów'**
   String homePageWidgetPoints(int points);
+
+  /// No description provided for @februaryShort.
+  ///
+  /// In pl, this message translates to:
+  /// **'Lut'**
+  String get februaryShort;
+
+  /// No description provided for @marchShort.
+  ///
+  /// In pl, this message translates to:
+  /// **'Mar'**
+  String get marchShort;
+
+  /// No description provided for @aprilShort.
+  ///
+  /// In pl, this message translates to:
+  /// **'Kwi'**
+  String get aprilShort;
+
+  /// No description provided for @points.
+  ///
+  /// In pl, this message translates to:
+  /// **'punkty'**
+  String get points;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

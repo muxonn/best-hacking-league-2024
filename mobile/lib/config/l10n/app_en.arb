@@ -26,5 +26,9 @@
                 "type": "int",
                 "example": "1250"
             }
-        }}
+        }},
+    "februaryShort": "Feb",
+    "marchShort": "Mar",
+    "aprilShort": "Apr",
+    "points": "points"
 }

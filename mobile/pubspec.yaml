@@ -7,6 +7,7 @@ environment:
   sdk: ">=3.3.2 <4.0.0"
 
 dependencies:
+  animated_segmented_tab_control: ^1.2.1
   circular_chart_flutter: ^0.0.2
   flutter:
     sdk: flutter
@@ -14,6 +15,7 @@ dependencies:
   flutter_hooks: ^0.20.5
   flutter_localizations:
     sdk: flutter
+  flutter_podium: ^1.0.4
   flutter_screenutil: ^5.9.0
   intl: ^0.18.1
   persistent_bottom_nav_bar: ^5.0.2
@@ -27,4 +29,4 @@ flutter:
   uses-material-design: true
   generate: true
   assets:
-    - assets/img/Podcast.png
+    - assets/img/
