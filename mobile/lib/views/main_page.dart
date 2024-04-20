@@ -10,9 +10,9 @@ class MainPage extends StatelessWidget {
 
   List<Widget> _buildScreens() {
     return [
-      HomePage(),
-      RankingPage(),
-      InfoPage(),
+      const HomePage(),
+      const RankingPage(),
+      const InfoPage(),
     ];
   }
 

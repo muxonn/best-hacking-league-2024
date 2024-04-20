@@ -1,7 +1,7 @@
 {
     "@@locale": "pl",
     "appTitle": "Back Buddy",
-    "homePageWelcomeText": "Cześć, {name}",
+    "homePageWelcomeText": "Cześć, {name}!",
     "@homePageWelcomeText":{
         "description": "Welcome text",
         "placeholders": {
@@ -13,5 +13,18 @@
     "homePageTodaySession": "Dzisiejsza sesja",
     "homePageGoodPosture": "Dobra postura",
     "homePageBadPosture": "Zła postura",
-    "homePageBreakTime": "Czas przerwy"
+    "homePageBreakTime": "Czas przerwy",
+    "homePageWidgetGood": "Twoja postawa jest świetna, tak trzymaj!",
+    "homePageWidgetOK": "Twoja postawa jest w porządku, ale zawsze może być lepiej!",
+    "homePageWidgetBad": "Twoja postawa wymaga poprawy. Rozważ wprowadzenie pewnych zmian.",
+    "homePageWidgetSubTitle": "Dzisiaj zdobyłeś już",
+    "homePageWidgetPoints": "{points} punktów",
+    "@homePageWidgetPoints":{
+        "description": "Points",
+        "placeholders": {
+            "points": {
+                "type": "int",
+                "example": "1250"
+            }
+        }}
 }

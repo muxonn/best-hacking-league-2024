@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:office_app/config/l10n/localizations.dart';
+import 'package:office_app/config/theme.dart';
 import 'package:office_app/views/main_page.dart';
 
 void main() {
@@ -18,15 +19,17 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ScreenUtilInit(
-      designSize: Size(320, 568),
+    return ScreenUtilInit(
+      designSize: const Size(320, 568),
       minTextAdapt: true,
       splitScreenMode: true,
       child: MaterialApp(
         supportedLocales: AppLocalizations.supportedLocales,
         localizationsDelegates: AppLocalizations.localizationsDelegates,
-        locale: Locale('pl'),
-        home: MainPage(),
+        locale: const Locale('en'),
+        home: const MainPage(),
+        theme: BBTheme.theme,
+        debugShowCheckedModeBanner: false,
       ),
     );
   }

@@ -102,7 +102,7 @@ abstract class AppLocalizations {
   /// Welcome text
   ///
   /// In pl, this message translates to:
-  /// **'Cześć, {name}'**
+  /// **'Cześć, {name}!'**
   String homePageWelcomeText(String name);
 
   /// No description provided for @homePageTodaySession.
@@ -128,6 +128,36 @@ abstract class AppLocalizations {
   /// In pl, this message translates to:
   /// **'Czas przerwy'**
   String get homePageBreakTime;
+
+  /// No description provided for @homePageWidgetGood.
+  ///
+  /// In pl, this message translates to:
+  /// **'Twoja postawa jest świetna, tak trzymaj!'**
+  String get homePageWidgetGood;
+
+  /// No description provided for @homePageWidgetOK.
+  ///
+  /// In pl, this message translates to:
+  /// **'Twoja postawa jest w porządku, ale zawsze może być lepiej!'**
+  String get homePageWidgetOK;
+
+  /// No description provided for @homePageWidgetBad.
+  ///
+  /// In pl, this message translates to:
+  /// **'Twoja postawa wymaga poprawy. Rozważ wprowadzenie pewnych zmian.'**
+  String get homePageWidgetBad;
+
+  /// No description provided for @homePageWidgetSubTitle.
+  ///
+  /// In pl, this message translates to:
+  /// **'Dzisiaj zdobyłeś już'**
+  String get homePageWidgetSubTitle;
+
+  /// Points
+  ///
+  /// In pl, this message translates to:
+  /// **'{points} punktów'**
+  String homePageWidgetPoints(int points);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

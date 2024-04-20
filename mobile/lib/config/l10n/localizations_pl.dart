@@ -9,7 +9,7 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String homePageWelcomeText(String name) {
-    return 'Cześć, $name';
+    return 'Cześć, $name!';
   }
 
   @override
@@ -23,4 +23,21 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get homePageBreakTime => 'Czas przerwy';
+
+  @override
+  String get homePageWidgetGood => 'Twoja postawa jest świetna, tak trzymaj!';
+
+  @override
+  String get homePageWidgetOK => 'Twoja postawa jest w porządku, ale zawsze może być lepiej!';
+
+  @override
+  String get homePageWidgetBad => 'Twoja postawa wymaga poprawy. Rozważ wprowadzenie pewnych zmian.';
+
+  @override
+  String get homePageWidgetSubTitle => 'Dzisiaj zdobyłeś już';
+
+  @override
+  String homePageWidgetPoints(int points) {
+    return '$points punktów';
+  }
 }
