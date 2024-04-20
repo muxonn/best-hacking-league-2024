@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="917972d9-2744-4b15-83af-eaf2f78bbcb3" name="rtau">
+        <fileTransfer rootFolder="/home/pi" accessType="SFTP" host="rtau.local" port="22" sshConfigId="b5e664b9-5034-48c8-aaba-d68b1afe9502" sshConfig="pi@rtau.local:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

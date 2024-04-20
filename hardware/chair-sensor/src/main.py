@@ -6,7 +6,11 @@ import busio
 import adafruit_vl53l0x
 import adafruit_adxl34x
 
+correct_bottom_len = 140
+bad_bottom_len= 400
+
 if __name__ == '__main__':
+
 
     # Initialize I2C bus and sensor.
     i2c = busio.I2C(board.SCL, board.SDA)
@@ -26,7 +30,15 @@ if __name__ == '__main__':
         # Main loop will read the range and print it every second.
         while True:
             try:
-                print("Range: {0}mm".format(seat_tof.range))
+                if(seat_tof.range <= correct_bottom_len):
+                    print("Range: {0}mm".format(seat_tof.range))
+                    print("Correct Bottom")
+                elif(seat_tof.range>correct_bottom_len and seat_tof.range<= bad_bottom_len):
+                    print("Range: {0}mm".format(seat_tof.range))
+                    print("Bad Bottom")
+                else:
+                    print("Range: {0}mm".format(seat_tof.range))
+                    print("No person detected")
             except OSError as e:
                 print("seat_tof not connected")
             try:
