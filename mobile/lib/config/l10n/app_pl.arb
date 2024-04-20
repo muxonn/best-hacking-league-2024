@@ -1,5 +1,17 @@
 {
     "@@locale": "pl",
     "appTitle": "Back Buddy",
-    "homePageTodaySession": "Dzisiejsza sesja"
+    "homePageWelcomeText": "Cześć, {name}",
+    "@homePageWelcomeText":{
+        "description": "Welcome text",
+        "placeholders": {
+            "name": {
+                "type": "String",
+                "example": "name"
+            }
+        }},
+    "homePageTodaySession": "Dzisiejsza sesja",
+    "homePageGoodPosture": "Dobra postura",
+    "homePageBadPosture": "Zła postura",
+    "homePageBreakTime": "Czas przerwy"
 }

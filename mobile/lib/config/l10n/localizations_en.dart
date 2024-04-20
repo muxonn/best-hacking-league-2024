@@ -8,5 +8,19 @@ class AppLocalizationsEn extends AppLocalizations {
   String get appTitle => 'Back Buddy';
 
   @override
+  String homePageWelcomeText(String name) {
+    return 'Hello, $name';
+  }
+
+  @override
   String get homePageTodaySession => 'Today\'s session';
+
+  @override
+  String get homePageGoodPosture => 'Good posture';
+
+  @override
+  String get homePageBadPosture => 'Bad posture';
+
+  @override
+  String get homePageBreakTime => 'Break time';
 }

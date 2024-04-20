@@ -99,11 +99,35 @@ abstract class AppLocalizations {
   /// **'Back Buddy'**
   String get appTitle;
 
+  /// Welcome text
+  ///
+  /// In pl, this message translates to:
+  /// **'Cześć, {name}'**
+  String homePageWelcomeText(String name);
+
   /// No description provided for @homePageTodaySession.
   ///
   /// In pl, this message translates to:
   /// **'Dzisiejsza sesja'**
   String get homePageTodaySession;
+
+  /// No description provided for @homePageGoodPosture.
+  ///
+  /// In pl, this message translates to:
+  /// **'Dobra postura'**
+  String get homePageGoodPosture;
+
+  /// No description provided for @homePageBadPosture.
+  ///
+  /// In pl, this message translates to:
+  /// **'Zła postura'**
+  String get homePageBadPosture;
+
+  /// No description provided for @homePageBreakTime.
+  ///
+  /// In pl, this message translates to:
+  /// **'Czas przerwy'**
+  String get homePageBreakTime;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
