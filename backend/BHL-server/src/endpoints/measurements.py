@@ -11,11 +11,11 @@ from src.data_models.measurement_model import (
 from src.security import authenticate
 
 # from src.security import autheticate_with_username_and_password as authenticate
-from src.database.mongo_config import db
+from src.database.mongo_config import measurements_collection
 
 router = APIRouter()
 
-measurements_collection = db.get_collection("measurements")
+
 
 @router.post("/",
              response_description="Add new measurement",

@@ -4,3 +4,6 @@ import motor.motor_asyncio
 MONGO_DETAILS = "mongodb://localhost:27017"
 client = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DETAILS)
 db = client.get_database("bhl-BackBuddy")
+
+measurements_collection = db.get_collection("measurements")
+users_collection = db.get_collection("users")

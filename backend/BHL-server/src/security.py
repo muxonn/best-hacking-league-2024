@@ -7,9 +7,8 @@ from fastapi.security import HTTPBasic, HTTPBasicCredentials
 from pydantic import BaseModel
 from starlette import status
 
-from src.database.mongo_config import db
+from src.database.mongo_config import users_collection
 
-users_collection = db.get_collection("users")
 
 security = HTTPBasic()
 
