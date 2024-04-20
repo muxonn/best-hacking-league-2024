@@ -28,7 +28,7 @@ class PersonTile extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        color: BBColors.white,
+        color: Colors.white,
       ),
       padding: EdgeInsets.symmetric(
         horizontal: 20.w,
@@ -71,11 +71,11 @@ class PersonTile extends StatelessWidget {
                 children: [
                   Text(
                     name,
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontWeight: FontWeight.bold),
                   ),
                   Text(
                     "$points " + context.text.points,
-                    style: TextStyle(fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
