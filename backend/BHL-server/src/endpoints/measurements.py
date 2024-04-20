@@ -17,7 +17,6 @@ router = APIRouter()
 
 measurements_collection = db.get_collection("measurements")
 
-
 @router.post("/",
              response_description="Add new measurement",
              status_code=status.HTTP_201_CREATED,
@@ -27,6 +26,9 @@ async def post_measurement(measurement: MeasurementPostModel,
     if username := Verification:
         measurement_dict = measurement.dict(by_alias=True, exclude={"id"})
         measurement_dict["owner"] = username
+
+        last_measurement = await measurements_collection.find_one({"owner": username}, {'_id': 0} , sort=[("timestamp", -1)])
+        measurement_dict["time_difference"] = measurement_dict["timestamp"] - last_measurement["timestamp"] if last_measurement else 0
         new_measurement = await measurements_collection.insert_one(measurement_dict)
 
 
