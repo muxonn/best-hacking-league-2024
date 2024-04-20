@@ -1,0 +1,16 @@
+services:
+  web:
+    build: .
+    ports:
+      - "80:8000"
+    depends_on:
+      - mongodb
+
+  mongodb:
+    image: mongo:7.0.8
+#    env_file:
+#      - .env
+    ports:
+      - "27017:27017"
+    command:
+      mongod --quiet --logpath /dev/null
