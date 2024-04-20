@@ -1,0 +1,17 @@
+{
+    "@@locale": "en",
+    "appTitle": "Back Buddy",
+    "homePageWelcomeText": "Hello, {name}",
+    "@homePageWelcomeText":{
+        "description": "Welcome text",
+        "placeholders": {
+            "name": {
+                "type": "String",
+                "example": "name"
+            }
+        }},
+    "homePageTodaySession": "Today's session",
+    "homePageGoodPosture": "Good posture",
+    "homePageBadPosture": "Bad posture",
+    "homePageBreakTime": "Break time"
+}

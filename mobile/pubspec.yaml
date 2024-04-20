@@ -1,14 +1,21 @@
 name: office_app
 description: "A new Flutter project."
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.0
 
 environment:
-  sdk: '>=3.3.2 <4.0.0'
+  sdk: ">=3.3.2 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.1.5
+  flutter_hooks: ^0.20.5
+  flutter_localizations:
+    sdk: flutter
+  flutter_screenutil: ^5.9.0
+  intl: ^0.18.1
+  persistent_bottom_nav_bar: ^5.0.2
 
 dev_dependencies:
   flutter_test:
@@ -17,3 +24,4 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true
