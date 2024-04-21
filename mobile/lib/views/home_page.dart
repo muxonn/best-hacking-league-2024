@@ -12,6 +12,7 @@ import 'package:office_app/features/application/current_user/models/current_user
 
 import 'package:office_app/features/circular_chart/circular_chart_widget.dart';
 import 'package:office_app/features/home_page_bottom_stats/widgets/home_page_bottom_stats.dart';
+import 'package:office_app/features/http_header/header_cubit.dart';
 import 'package:office_app/features/main_page_info_widget/main_page_info_widget.dart';
 
 class HomePage extends HookWidget {
@@ -32,12 +33,14 @@ class HomePage extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
+    final headers = context.watch<HeaderCubit>().state;
+
     useMemoized(() {
-      context.read<CurrentUserCubit>().fetchCurrentUser();
+      context.read<CurrentUserCubit>().fetchCurrentUser(headers);
       Timer.periodic(
         Duration(seconds: 10),
         (timer) async {
-          context.read<CurrentUserCubit>().fetchCurrentUser();
+          context.read<CurrentUserCubit>().fetchCurrentUser(headers);
         },
       );
     });
