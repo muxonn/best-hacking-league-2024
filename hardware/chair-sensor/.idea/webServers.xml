@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="825263f4-d1e3-44aa-93c4-68d361815992" name="tau">
-        <fileTransfer rootFolder="/home/pi" accessType="SFTP" host="rtau.local" port="22" sshConfigId="102aeb1d-f817-4b14-ae39-89818cdd33c2" sshConfig="pi@rtau.local:22 password">
+        <fileTransfer rootFolder="/home/pi" accessType="SFTP" host="rpi.local" port="22" sshConfigId="102aeb1d-f817-4b14-ae39-89818cdd33c2" sshConfig="pi@rpi.local:22 key" keyPair="true">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

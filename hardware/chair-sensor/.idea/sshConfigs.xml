@@ -2,7 +2,7 @@
 <project version="4">
   <component name="SshConfigs">
     <configs>
-      <sshConfig authType="PASSWORD" host="rtau.local" id="102aeb1d-f817-4b14-ae39-89818cdd33c2" port="22" nameFormat="DESCRIPTIVE" username="pi" useOpenSSHConfig="true" />
+      <sshConfig host="rpi.local" id="102aeb1d-f817-4b14-ae39-89818cdd33c2" keyPath="$USER_HOME$/.ssh/rpi" port="22" nameFormat="DESCRIPTIVE" username="pi" useOpenSSHConfig="true" />
     </configs>
   </component>
 </project>
