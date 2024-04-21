@@ -200,6 +200,24 @@ abstract class AppLocalizations {
   /// In pl, this message translates to:
   /// **'Zaloguj się'**
   String get logIn;
+
+  /// No description provided for @invalidText.
+  ///
+  /// In pl, this message translates to:
+  /// **'Nieprawidłowy login lub hasło'**
+  String get invalidText;
+
+  /// No description provided for @username.
+  ///
+  /// In pl, this message translates to:
+  /// **'Nazwa użytkownika'**
+  String get username;
+
+  /// No description provided for @password.
+  ///
+  /// In pl, this message translates to:
+  /// **'Hasło'**
+  String get password;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

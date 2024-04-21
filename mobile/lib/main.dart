@@ -4,6 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:office_app/config/l10n/localizations.dart';
 import 'package:office_app/config/theme.dart';
+import 'package:office_app/features/application/current_user/cubit/current_user_cubit.dart';
+import 'package:office_app/features/application/users/cubit/ranking_cubit.dart';
 import 'package:office_app/features/languages/cubit/language_cubit.dart';
 import 'package:office_app/features/languages/data/languages.dart';
 import 'package:office_app/views/login_page.dart';
@@ -23,8 +25,18 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => LanguageCubit(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => LanguageCubit(),
+        ),
+        BlocProvider(
+          create: (context) => RankingCubit(),
+        ),
+        BlocProvider(
+          create: (context) => CurrentUserCubit(),
+        ),
+      ],
       child: ScreenUtilInit(
         designSize: const Size(320, 568),
         minTextAdapt: true,

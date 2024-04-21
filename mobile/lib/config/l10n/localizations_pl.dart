@@ -61,4 +61,13 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get logIn => 'Zaloguj się';
+
+  @override
+  String get invalidText => 'Nieprawidłowy login lub hasło';
+
+  @override
+  String get username => 'Nazwa użytkownika';
+
+  @override
+  String get password => 'Hasło';
 }
