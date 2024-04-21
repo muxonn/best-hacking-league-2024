@@ -84,7 +84,7 @@ class LoginPage extends HookWidget {
                       usernameController.text, passwordController.text);
                   if (response == 200) {
                     FocusManager.instance.primaryFocus?.unfocus();
-                    Future.delayed(Duration(milliseconds: 500));
+                    Future.delayed(Duration(milliseconds: 800));
                     PersistentNavBarNavigator.pushNewScreen(
                       context,
                       screen: MainPage(),

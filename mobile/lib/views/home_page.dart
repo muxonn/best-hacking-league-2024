@@ -8,7 +8,6 @@ import 'package:office_app/config/colors.dart';
 import 'package:office_app/config/constants/sizes.dart';
 import 'package:office_app/config/l10n/extensions.dart';
 import 'package:office_app/features/application/current_user/cubit/current_user_cubit.dart';
-import 'package:office_app/features/application/current_user/current_user_repository.dart';
 import 'package:office_app/features/application/current_user/models/current_user.dart';
 
 import 'package:office_app/features/circular_chart/circular_chart_widget.dart';
@@ -34,6 +33,7 @@ class HomePage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     useMemoized(() {
+      context.read<CurrentUserCubit>().fetchCurrentUser();
       Timer.periodic(
         Duration(seconds: 10),
         (timer) async {
