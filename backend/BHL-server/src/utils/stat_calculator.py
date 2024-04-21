@@ -38,8 +38,8 @@ def _calculate_points(measurement: dict):
     time_difference = measurement['time_difference']
 
     correct_time, incorrect_time, break_time = _calculate_correct_incorrect(values, time_difference)
-
-    return correct_time * 2 - incorrect_time
+    score = correct_time * 2 - incorrect_time
+    return score if score > 0 else 0
 
 
 def calculate_ranking(meas: list[MeasurementModel]) -> UserRankingStatModel:

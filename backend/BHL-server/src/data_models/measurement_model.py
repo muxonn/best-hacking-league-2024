@@ -1,5 +1,6 @@
 import time
-from typing import Optional, Annotated
+from datetime import datetime
+from typing import Optional, Annotated, Any
 
 from pydantic import BaseModel, ConfigDict, BeforeValidator, Field
 
@@ -13,7 +14,7 @@ class MeasurementValuesModel(BaseModel):
 
 class MeasurementModel(BaseModel):
     id: Optional[PyObjectId] = Field(alias="_id", default=None)
-    timestamp: int = Field(alias="timestamp", default_factory=lambda: round(time.time()))
+    timestamp: int | Any = Field(alias="timestamp", default_factory=lambda: datetime.now())
 
     values: MeasurementValuesModel = Field(default_factory=MeasurementValuesModel)
 

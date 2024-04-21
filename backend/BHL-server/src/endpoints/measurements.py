@@ -44,4 +44,5 @@ async def post_measurement(measurement: MeasurementPostModel,
 async def list_measurements(page: int = 0, size: int = 1000):
     print(f"page: {page}, size: {size}")
     measurements = await measurements_collection.find().sort("timestamp", -1).skip(page*size).limit(size).to_list(size)
+    # measurements['posture']
     return MeasurementCollection(measurements=measurements)
