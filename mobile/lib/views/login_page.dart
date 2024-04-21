@@ -1,18 +1,20 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:office_app/config/colors.dart';
 import 'package:office_app/config/l10n/extensions.dart';
 import 'package:office_app/features/application/core/user_client.dart';
+import 'package:office_app/features/http_header/header_cubit.dart';
 import 'package:office_app/views/main_page.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 class LoginPage extends HookWidget {
   const LoginPage({super.key});
 
-  static logIn(String username, String password) async {
+  static logIn(String username, String password, BuildContext context) async {
     String basicAuth =
         'Basic ${base64Encode(utf8.encode('$username:$password'))}';
     Map<String, String> headers = {
@@ -22,6 +24,7 @@ class LoginPage extends HookWidget {
 
     final response = await client.logIn(headers);
     print(response);
+    context.read<HeaderCubit>().addHeader(headers);
     return response;
   }
 
@@ -57,19 +60,18 @@ class LoginPage extends HookWidget {
             const SizedBox(height: 30),
             Wrap(
               runSpacing: 10,
-              //TODO: Add forms logic
               children: [
                 TextFormField(
                   controller: usernameController,
                   cursorColor: BBColors.lightPurple,
                   style: TextStyle(color: BBColors.white),
-                  decoration: const InputDecoration(hintText: "Username"),
+                  decoration: InputDecoration(hintText: context.text.username),
                 ),
                 TextFormField(
                   controller: passwordController,
                   cursorColor: BBColors.lightPurple,
                   style: TextStyle(color: BBColors.white),
-                  decoration: const InputDecoration(hintText: "Password"),
+                  decoration: InputDecoration(hintText: context.text.password),
                   obscureText: true,
                 ),
               ],
@@ -77,11 +79,13 @@ class LoginPage extends HookWidget {
             const SizedBox(height: 60),
             SizedBox(
               width: 200.w,
-              //TODO: Add login logic
               child: ElevatedButton(
                 onPressed: () async {
                   final response = await logIn(
-                      usernameController.text, passwordController.text);
+                    usernameController.text,
+                    passwordController.text,
+                    context,
+                  );
                   if (response == 200) {
                     FocusManager.instance.primaryFocus?.unfocus();
                     Future.delayed(Duration(milliseconds: 800));

@@ -4,12 +4,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:office_app/config/colors.dart';
 
 class MainPageInfoWidget extends StatelessWidget {
-  const MainPageInfoWidget(
-      {super.key,
-      required this.title,
-      required this.subtitle,
-      required this.points,
-      required this.color});
+  const MainPageInfoWidget({
+    super.key,
+    required this.title,
+    required this.subtitle,
+    required this.points,
+    required this.color,
+  });
 
   final String title;
   final String subtitle;

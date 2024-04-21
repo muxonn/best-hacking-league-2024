@@ -12,8 +12,9 @@ class UserClient extends BBBaseClient {
     return response.statusCode;
   }
 
-  Future<dynamic> getCurrentUserMeasurements() async {
-    final response = await get(UserClientPath.measurements());
+  Future<dynamic> getCurrentUserMeasurements(
+      Map<String, String> headers) async {
+    final response = await getHeaders(UserClientPath.measurements(), headers);
     return response;
   }
 }

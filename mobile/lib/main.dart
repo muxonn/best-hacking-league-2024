@@ -6,6 +6,7 @@ import 'package:office_app/config/l10n/localizations.dart';
 import 'package:office_app/config/theme.dart';
 import 'package:office_app/features/application/current_user/cubit/current_user_cubit.dart';
 import 'package:office_app/features/application/users/cubit/ranking_cubit.dart';
+import 'package:office_app/features/http_header/header_cubit.dart';
 import 'package:office_app/features/languages/cubit/language_cubit.dart';
 import 'package:office_app/features/languages/data/languages.dart';
 import 'package:office_app/views/login_page.dart';
@@ -35,6 +36,9 @@ class MainApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => CurrentUserCubit(),
+        ),
+        BlocProvider(
+          create: (context) => HeaderCubit(),
         ),
       ],
       child: ScreenUtilInit(
