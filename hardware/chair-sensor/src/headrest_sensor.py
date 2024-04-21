@@ -1,8 +1,9 @@
 import adafruit_vl53l0x
 
-class SeatSensor:
 
+class HeadrestSensor:
     _max_distance = 500
+
     def __init__(self, i2c):
         self._accelerometer = adafruit_vl53l0x.VL53L0X(i2c)
 
