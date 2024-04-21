@@ -6,4 +6,11 @@ class User {
     required this.name,
     required this.points,
   });
+
+  factory User.fromJson(Map<String, dynamic> json) {
+    return User(
+      name: json['user'],
+      points: json['score'],
+    );
+  }
 }

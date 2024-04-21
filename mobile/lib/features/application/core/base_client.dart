@@ -8,4 +8,8 @@ abstract class BBBaseClient {
   Future<dynamic> post(Uri uri, dynamic payload) async {
     return http.post(uri, body: payload);
   }
+
+  Future<dynamic> getHeaders(Uri uri, Map<String, String> headers) async {
+    return http.get(uri, headers: headers);
+  }
 }
