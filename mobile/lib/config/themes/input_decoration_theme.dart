@@ -3,13 +3,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:office_app/config/colors.dart';
 
 class BBInputDecorationTheme {
-  static final lightInputDecorationTheme = InputDecorationTheme(
+  static final inputDecorationTheme = InputDecorationTheme(
     enabledBorder: UnderlineInputBorder(
-      borderSide: BorderSide(color: BBColors.black),
+      borderSide: BorderSide(color: BBColors.white),
     ),
     focusedBorder: UnderlineInputBorder(
-      borderSide: BorderSide(color: BBColors.black),
+      borderSide: BorderSide(color: BBColors.white),
     ),
-    hintStyle: TextStyle(color: BBColors.black, fontSize: 16.sp),
+    hintStyle: TextStyle(color: BBColors.white, fontSize: 12.sp),
   );
 }

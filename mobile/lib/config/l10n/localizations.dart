@@ -194,6 +194,12 @@ abstract class AppLocalizations {
   /// In pl, this message translates to:
   /// **'Wyloguj się'**
   String get logOut;
+
+  /// No description provided for @logIn.
+  ///
+  /// In pl, this message translates to:
+  /// **'Zaloguj się'**
+  String get logIn;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

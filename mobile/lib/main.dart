@@ -7,6 +7,7 @@ import 'package:office_app/config/theme.dart';
 import 'package:office_app/features/languages/cubit/language_cubit.dart';
 import 'package:office_app/features/languages/data/languages.dart';
 import 'package:office_app/views/login_page.dart';
+import 'package:office_app/views/main_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -39,6 +40,10 @@ class MainApp extends StatelessWidget {
                   : const Locale('pl'),
               home: const LoginPage(),
               theme: BBTheme.theme,
+              routes: {
+                '/login-page': (context) => const LoginPage(),
+                '/main-page': (context) => const MainPage(),
+              },
               debugShowCheckedModeBanner: false,
             );
           },

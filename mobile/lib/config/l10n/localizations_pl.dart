@@ -58,4 +58,7 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get logOut => 'Wyloguj się';
+
+  @override
+  String get logIn => 'Zaloguj się';
 }

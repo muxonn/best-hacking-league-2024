@@ -5,8 +5,8 @@ class BBElevatedButtonTheme {
   static final elevatedButtonTheme = ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
       elevation: 0,
-      foregroundColor: BBColors.white,
-      backgroundColor: BBColors.deepPurple,
+      foregroundColor: BBColors.deepPurple,
+      backgroundColor: BBColors.white,
       padding: EdgeInsets.symmetric(vertical: 10),
     ),
   );

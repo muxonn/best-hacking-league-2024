@@ -8,6 +8,8 @@ import 'package:office_app/config/constants/sizes.dart';
 import 'package:office_app/config/l10n/extensions.dart';
 import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 import 'package:office_app/features/languages/cubit/language_cubit.dart';
+import 'package:office_app/views/login_page.dart';
+import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 
 class InfoPage extends StatelessWidget {
   const InfoPage({super.key});
@@ -54,7 +56,15 @@ class InfoPage extends StatelessWidget {
                 height: 32.h,
                 width: 90.w,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    PersistentNavBarNavigator.pushNewScreen(
+                      context,
+                      screen: LoginPage(),
+                      withNavBar: false, // OPTIONAL VALUE. True by default.
+                      pageTransitionAnimation:
+                          PageTransitionAnimation.cupertino,
+                    );
+                  },
                   style: ElevatedButton.styleFrom(
                     padding: EdgeInsets.all(0),
                     shape: RoundedRectangleBorder(

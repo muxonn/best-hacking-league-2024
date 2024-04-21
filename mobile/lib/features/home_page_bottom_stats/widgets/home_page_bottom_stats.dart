@@ -41,8 +41,13 @@ class HomePageBottomStats extends StatelessWidget {
 
   Widget buildItem(BuildContext context, double minutes, TimeType timeType) {
     double totalMinutes = goodMinutes + badMinutes + breakMinutes;
+    late int percent;
+    if (totalMinutes == 0) {
+      percent = 0;
+    } else {
+      percent = (minutes / totalMinutes * 100).round();
+    }
 
-    int percent = (minutes / totalMinutes * 100).round();
     // Color and text based on the custom type
     late Color color = BBColors.deepPurple;
     late String text = context.text.homePageBreakTime;

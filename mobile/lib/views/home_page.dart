@@ -51,9 +51,9 @@ class HomePage extends StatelessWidget {
               breakMinutes: 50,
             ),
             const HomePageBottomStats(
-              goodMinutes: 160,
-              badMinutes: 100,
-              breakMinutes: 50,
+              goodMinutes: 0,
+              badMinutes: 0,
+              breakMinutes: 0,
             ),
           ],
         ),

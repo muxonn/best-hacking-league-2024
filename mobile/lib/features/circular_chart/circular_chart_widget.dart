@@ -28,21 +28,34 @@ class CircularChartWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<CircularStackEntry> data = <CircularStackEntry>[
-      CircularStackEntry(
-        <CircularSegmentEntry>[
-          CircularSegmentEntry(goodMinutes, BBColors.greenStatus,
-              rankKey: 'Good posture'),
-          CircularSegmentEntry(badMinutes, BBColors.pinkStatus,
-              rankKey: 'Bad posture'),
-          CircularSegmentEntry(breakMinutes, BBColors.deepPurple,
-              rankKey: 'Break time'),
-        ],
-        rankKey: 'Quality time',
-      ),
-    ];
     final GlobalKey<AnimatedCircularChartState> chartKey =
         GlobalKey<AnimatedCircularChartState>();
+
+    late List<CircularStackEntry> data;
+    if (goodMinutes == 0 && badMinutes == 0 && breakMinutes == 0) {
+      data = <CircularStackEntry>[
+        CircularStackEntry(
+          <CircularSegmentEntry>[
+            CircularSegmentEntry(1, BBColors.deepPurple, rankKey: 'Neutral'),
+          ],
+          rankKey: 'Quality time',
+        ),
+      ];
+    } else {
+      data = <CircularStackEntry>[
+        CircularStackEntry(
+          <CircularSegmentEntry>[
+            CircularSegmentEntry(goodMinutes, BBColors.greenStatus,
+                rankKey: 'Good posture'),
+            CircularSegmentEntry(badMinutes, BBColors.pinkStatus,
+                rankKey: 'Bad posture'),
+            CircularSegmentEntry(breakMinutes, BBColors.deepPurple,
+                rankKey: 'Break time'),
+          ],
+          rankKey: 'Quality time',
+        ),
+      ];
+    }
 
     return Center(
       child: AnimatedCircularChart(
