@@ -34,8 +34,7 @@ class HomePage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     useMemoized(() {
-      context.read<CurrentUserCubit>().fetchCurrentUser();
-      final timer = Timer.periodic(
+      Timer.periodic(
         Duration(seconds: 10),
         (timer) async {
           context.read<CurrentUserCubit>().fetchCurrentUser();
