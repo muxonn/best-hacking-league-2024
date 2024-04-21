@@ -36,19 +36,23 @@ def check_no_person():
         return no_person_acceleration_data, no_person_detected_data  # Return the accelerometer data when condition is met
     return None, False
 
-# def check_person_back_acceleration():
-#     global actual_acceleration_data
-#     actual_acceleration_data = accelerometer.acceleration
-#     if abs(actual_acceleration_data - no_person_acceleration_data) > 0.2:
-#         return True
-#     return False
+def check_person_back_acceleration():
+    global actual_acceleration_data
+    actual_acceleration_data = accelerometer.acceleration
+    if abs(actual_acceleration_data[1] - no_person_acceleration_data[1])>1:
+        return True
+    return False
 
 
 if __name__ == '__main__':
     # Initialize I2C bus and sensor.
-    i2c = busio.I2C(board.SCL, board.SDA)
-    seat_tof = adafruit_vl53l0x.VL53L0X(i2c)
-    accelerometer = adafruit_adxl34x.ADXL345(i2c)
+    i2c0 = busio.I2C(board.SCL, board.SDA)
+    seat_tof = adafruit_vl53l0x.VL53L0X(i2c0)
+    accelerometer = adafruit_adxl34x.ADXL345(i2c0)
+
+    i2c1 = busio.I2C(board.SCL1, board.SDA1)
+
+    headrest = adafruit_adxl34x.ADXL345(i2c1)
 
     # Optionally adjust the measurement timing budget to change speed and accuracy.
     # See the example here for more details:
@@ -88,10 +92,10 @@ if __name__ == '__main__':
                 # print("Motion detected: %s" % accelerometer.events["motion"])
             except OSError as e:
                 print("accelerometer not connected")
-            # if check_person_back_acceleration():
-            #     print("Correct Back")
-            # else:
-            #     print("Bad Back")
+            if check_person_back_acceleration():
+                print("Correct Back")
+            else:
+                print("Bad Back")
 
             time.sleep(1.0)
     except KeyboardInterrupt:
