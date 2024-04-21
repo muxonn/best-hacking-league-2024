@@ -29,6 +29,9 @@ async def post_measurement(measurement: MeasurementPostModel,
 
         last_measurement = await measurements_collection.find_one({"owner": username}, {'_id': 0} , sort=[("timestamp", -1)])
         measurement_dict["time_difference"] = measurement_dict["timestamp"] - last_measurement["timestamp"] if last_measurement else 0
+        if measurement_dict["time_difference"] > 60:
+            measurement_dict["time_difference"] = 0
+
         new_measurement = await measurements_collection.insert_one(measurement_dict)
 
 
