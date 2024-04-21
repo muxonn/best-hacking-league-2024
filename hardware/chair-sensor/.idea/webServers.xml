@@ -2,8 +2,8 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="b825b116-a25c-4be1-aa20-3effac99fa8d" name="rpi-koiot">
-        <fileTransfer rootFolder="/home/pi" accessType="SFTP" host="rpi.local" port="22" sshConfigId="9cf39289-90b1-445d-94ab-8958a2d00bea" sshConfig="pi@rpi.local:22 key" keyPair="true">
+      <webServer id="825263f4-d1e3-44aa-93c4-68d361815992" name="tau">
+        <fileTransfer rootFolder="/home/pi" accessType="SFTP" host="rtau.local" port="22" sshConfigId="102aeb1d-f817-4b14-ae39-89818cdd33c2" sshConfig="pi@rtau.local:22 password">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

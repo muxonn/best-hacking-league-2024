@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="rpi-koiot" remoteFilesAllowedToDisappearOnAutoupload="false" showNewOnSourceInSync="false" showNewOnTargetInSync="false">
+  <component name="PublishConfigData" serverName="tau">
     <serverData>
-      <paths name="rpi-koiot">
+      <paths name="tau">
         <serverdata>
           <mappings>
-            <mapping deploy="/chair-sensor" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="chair" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
