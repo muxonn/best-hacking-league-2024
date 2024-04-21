@@ -26,42 +26,36 @@ class HomePage extends StatelessWidget {
       backgroundColor: BBColors.white,
       body: Padding(
         padding: BBSizes.mainPadding,
-        child: RefreshIndicator(
-          onRefresh: refresh,
-          child: SingleChildScrollView(
-            physics: AlwaysScrollableScrollPhysics(),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  context.text.homePageWelcomeText("Francesco"),
-                  style: headerStyle,
-                ),
-                //TODO: Logic
-                MainPageInfoWidget(
-                  title: context.text.homePageWidgetGood,
-                  subtitle: context.text.homePageWidgetSubTitle,
-                  points: context.text.homePageWidgetPoints(2040),
-                  color: BBColors.greenStatus,
-                ),
-                Text(
-                  context.text.homePageTodaySession,
-                  style: headerStyle,
-                ),
-                SizedBox(height: 15.h),
-                const CircularChartWidget(
-                  goodMinutes: 160,
-                  badMinutes: 100,
-                  breakMinutes: 50,
-                ),
-                const HomePageBottomStats(
-                  goodMinutes: 160,
-                  badMinutes: 100,
-                  breakMinutes: 50,
-                ),
-              ],
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              context.text.homePageWelcomeText("Francesco"),
+              style: headerStyle,
             ),
-          ),
+            //TODO: Logic
+            MainPageInfoWidget(
+              title: context.text.homePageWidgetGood,
+              subtitle: context.text.homePageWidgetSubTitle,
+              points: context.text.homePageWidgetPoints(2040),
+              color: BBColors.greenStatus,
+            ),
+            Text(
+              context.text.homePageTodaySession,
+              style: headerStyle,
+            ),
+            SizedBox(height: 15.h),
+            const CircularChartWidget(
+              goodMinutes: 160,
+              badMinutes: 100,
+              breakMinutes: 50,
+            ),
+            const HomePageBottomStats(
+              goodMinutes: 160,
+              badMinutes: 100,
+              breakMinutes: 50,
+            ),
+          ],
         ),
       ),
     );

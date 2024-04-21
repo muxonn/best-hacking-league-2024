@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:office_app/config/colors.dart';
+import 'package:office_app/config/themes/elevated_button_theme.dart';
 import 'package:office_app/config/themes/text_button_theme.dart';
 
 class BBTheme {
@@ -8,5 +9,6 @@ class BBTheme {
     fontFamily: 'Roboto',
     scaffoldBackgroundColor: BBColors.white,
     textButtonTheme: BBTextButtonTheme.textButtonTheme,
+    elevatedButtonTheme: BBElevatedButtonTheme.elevatedButtonTheme,
   );
 }

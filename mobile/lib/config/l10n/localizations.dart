@@ -188,6 +188,12 @@ abstract class AppLocalizations {
   /// In pl, this message translates to:
   /// **'Poznaj Back Buddy! Nasza aplikacja rewolucjonizuje pracę biurową, wspierając zdrowie psychiczne i fizyczne. To nie tylko monitorowanie postawy i przerw - Back Buddy to Twoje wsparcie, dbające o komfort i zdrowie.Dzięki zaawansowanej technologii rozpoznawania postawy, wspiera dobre nawyki siedzenia, a także dodaje odrobinę zabawy dzięki grywalizacji. Rywalizuj z kolegami, aby zobaczyć, kto utrzymuje najlepszą postawę i bierze najwięcej przerw. Back Buddy zamienia dbałość o zdrowie w grę, sprawiając, że stajesz się mistrzem ergonomii!Priorytetem jest dla nas także zdrowie psychiczne, dlatego wspieramy relacje między współpracownikami poprzez przyjazną rywalizację. Dołącz do nas i ciesz się produktywnym, wspierającym środowiskiem pracy z Back Buddy!'**
   String get infoText;
+
+  /// No description provided for @logOut.
+  ///
+  /// In pl, this message translates to:
+  /// **'Wyloguj się'**
+  String get logOut;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

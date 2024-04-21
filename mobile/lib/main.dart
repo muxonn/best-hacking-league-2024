@@ -6,7 +6,7 @@ import 'package:office_app/config/l10n/localizations.dart';
 import 'package:office_app/config/theme.dart';
 import 'package:office_app/features/languages/cubit/language_cubit.dart';
 import 'package:office_app/features/languages/data/languages.dart';
-import 'package:office_app/views/main_page.dart';
+import 'package:office_app/views/login_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -37,7 +37,7 @@ class MainApp extends StatelessWidget {
               locale: state == BBLanguages.en
                   ? const Locale('en')
                   : const Locale('pl'),
-              home: const MainPage(),
+              home: const LoginPage(),
               theme: BBTheme.theme,
               debugShowCheckedModeBanner: false,
             );
