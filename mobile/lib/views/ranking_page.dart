@@ -32,7 +32,6 @@ class RankingPage extends HookWidget {
     );
 
     UserRanking? getState(RankingCubitState state) {
-      print(state);
       if (state is RankingCubitLoaded) {
         return state.ranking;
       }
@@ -41,13 +40,10 @@ class RankingPage extends HookWidget {
 
     if (index.value == 0) {
       context.read<RankingCubit>().fetchRanking(2);
-      print(index.value);
     } else if (index.value == 1) {
       context.read<RankingCubit>().fetchRanking(3);
-      print(index.value);
     } else if (index.value == 2) {
       context.read<RankingCubit>().fetchRanking(4);
-      print(index.value);
     }
     return Scaffold(
       backgroundColor: BBColors.deepPurple,
@@ -70,7 +66,7 @@ class RankingPage extends HookWidget {
                         ),
                       ),
                     ),
-                    SizedBox(height: 16.h),
+                    SizedBox(height: 13.h),
                     SizedBox(
                       width: 220.w,
                       child: SegmentedTabControl(
@@ -98,19 +94,19 @@ class RankingPage extends HookWidget {
                         currentState!.users.length > 2)
                       Podium(
                         firstPosition: PodiumTile(
-                            name: currentState!.users[0].name,
-                            points: currentState!.users[0].points),
+                            name: currentState.users[0].name,
+                            points: currentState.users[0].points),
                         secondPosition: PodiumTile(
-                            name: currentState!.users[1].name,
-                            points: currentState!.users[1].points),
+                            name: currentState.users[1].name,
+                            points: currentState.users[1].points),
                         thirdPosition: PodiumTile(
-                            name: currentState!.users[2].name,
-                            points: currentState!.users[2].points),
+                            name: currentState.users[2].name,
+                            points: currentState.users[2].points),
                         showRankingNumberInsteadOfText: true,
                         color: BBColors.lightPurple,
                         rankingTextColor: BBColors.white,
                         rankingFontSize: 30.sp,
-                        height: 130.h,
+                        height: 120.h,
                         width: 70.w,
                       ),
                   ],

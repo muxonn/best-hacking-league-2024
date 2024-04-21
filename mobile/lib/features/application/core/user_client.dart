@@ -7,8 +7,13 @@ class UserClient extends BBBaseClient {
     return response;
   }
 
-  Future<dynamic> logIn(Map<String, String> headers) async {
+  Future<int> logIn(Map<String, String> headers) async {
     final response = await getHeaders(UserClientPath.time(), headers);
+    return response.statusCode;
+  }
+
+  Future<dynamic> getCurrentUserMeasurements() async {
+    final response = await get(UserClientPath.measurements());
     return response;
   }
 }

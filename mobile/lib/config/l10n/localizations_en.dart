@@ -61,4 +61,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get logIn => 'Log In';
+
+  @override
+  String get invalidText => 'Invalid login or password';
+
+  @override
+  String get username => 'Username';
+
+  @override
+  String get password => 'Password';
 }

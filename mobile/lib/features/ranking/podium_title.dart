@@ -11,12 +11,14 @@ class PodiumTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
           name,
           style: TextStyle(
             fontWeight: FontWeight.bold,
             color: BBColors.white,
+            fontSize: 6.sp,
           ),
         ),
         Container(
@@ -29,6 +31,7 @@ class PodiumTile extends StatelessWidget {
             points.abs().toString(),
             style: TextStyle(
               color: BBColors.white,
+              fontSize: 8.sp,
             ),
           ),
         ),
