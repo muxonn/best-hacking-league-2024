@@ -102,7 +102,7 @@ abstract class AppLocalizations {
   /// Welcome text
   ///
   /// In pl, this message translates to:
-  /// **'Cześć, {name}'**
+  /// **'Cześć, {name}!'**
   String homePageWelcomeText(String name);
 
   /// No description provided for @homePageTodaySession.
@@ -128,6 +128,78 @@ abstract class AppLocalizations {
   /// In pl, this message translates to:
   /// **'Czas przerwy'**
   String get homePageBreakTime;
+
+  /// No description provided for @homePageWidgetGood.
+  ///
+  /// In pl, this message translates to:
+  /// **'Twoja postawa jest świetna, tak trzymaj!'**
+  String get homePageWidgetGood;
+
+  /// No description provided for @homePageWidgetBreakTime.
+  ///
+  /// In pl, this message translates to:
+  /// **'Myślę, że to czas na kawę ☕'**
+  String get homePageWidgetBreakTime;
+
+  /// No description provided for @homePageWidgetBad.
+  ///
+  /// In pl, this message translates to:
+  /// **'Twoja postawa wymaga poprawy. Spróbuj to zmienić!'**
+  String get homePageWidgetBad;
+
+  /// No description provided for @homePageWidgetSubTitle.
+  ///
+  /// In pl, this message translates to:
+  /// **'Dzisiaj zdobyłeś już'**
+  String get homePageWidgetSubTitle;
+
+  /// Points
+  ///
+  /// In pl, this message translates to:
+  /// **'{points} punktów'**
+  String homePageWidgetPoints(int points);
+
+  /// No description provided for @februaryShort.
+  ///
+  /// In pl, this message translates to:
+  /// **'Lut'**
+  String get februaryShort;
+
+  /// No description provided for @marchShort.
+  ///
+  /// In pl, this message translates to:
+  /// **'Mar'**
+  String get marchShort;
+
+  /// No description provided for @aprilShort.
+  ///
+  /// In pl, this message translates to:
+  /// **'Kwi'**
+  String get aprilShort;
+
+  /// No description provided for @points.
+  ///
+  /// In pl, this message translates to:
+  /// **'punkty'**
+  String get points;
+
+  /// No description provided for @infoText.
+  ///
+  /// In pl, this message translates to:
+  /// **'Poznaj Back Buddy! Nasza aplikacja rewolucjonizuje pracę biurową, wspierając zdrowie psychiczne i fizyczne. To nie tylko monitorowanie postawy i przerw - Back Buddy to Twoje wsparcie, dbające o komfort i zdrowie.Dzięki zaawansowanej technologii rozpoznawania postawy, wspiera dobre nawyki siedzenia, a także dodaje odrobinę zabawy dzięki grywalizacji. Rywalizuj z kolegami, aby zobaczyć, kto utrzymuje najlepszą postawę i bierze najwięcej przerw. Back Buddy zamienia dbałość o zdrowie w grę, sprawiając, że stajesz się mistrzem ergonomii!Priorytetem jest dla nas także zdrowie psychiczne, dlatego wspieramy relacje między współpracownikami poprzez przyjazną rywalizację. Dołącz do nas i ciesz się produktywnym, wspierającym środowiskiem pracy z Back Buddy!'**
+  String get infoText;
+
+  /// No description provided for @logOut.
+  ///
+  /// In pl, this message translates to:
+  /// **'Wyloguj się'**
+  String get logOut;
+
+  /// No description provided for @logIn.
+  ///
+  /// In pl, this message translates to:
+  /// **'Zaloguj się'**
+  String get logIn;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
