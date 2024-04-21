@@ -29,6 +29,9 @@ async def post_measurement(measurement: MeasurementPostModel,
 
         last_measurement = await measurements_collection.find_one({"owner": username}, {'_id': 0} , sort=[("timestamp", -1)])
         measurement_dict["time_difference"] = measurement_dict["timestamp"] - last_measurement["timestamp"] if last_measurement else 0
+        if measurement_dict["time_difference"] > 60:
+            measurement_dict["time_difference"] = 0
+
         new_measurement = await measurements_collection.insert_one(measurement_dict)
 
 
@@ -41,8 +44,17 @@ async def post_measurement(measurement: MeasurementPostModel,
 @router.get("/", response_description="List all measurements",
             response_model=MeasurementCollection,
             response_model_by_alias=False)
-async def list_measurements(page: int = 0, size: int = 1000):
-    print(f"page: {page}, size: {size}")
-    measurements = await measurements_collection.find().sort("timestamp", -1).skip(page*size).limit(size).to_list(size)
-    # measurements['posture']
-    return MeasurementCollection(measurements=measurements)
+async def list_measurements(page: int = 0, size: int = 1000,
+                            Verification = Depends(authenticate)):
+    if username := Verification:
+        print(f"page: {page}, size: {size}")
+        measurements = await measurements_collection.find({"owner": username}, {'_id': 0}).sort("timestamp", -1).skip(page*size).limit(size).to_list(size)
+        for i in range(len(measurements)):
+            if not measurements[i]["values"]["seated"]:
+                measurements[i]["posture"] = "break"
+            elif measurements[i]["values"]["backrest"] and measurements[i]["values"]["backrest"]:
+                measurements[i]["posture"] = "correct"
+            else:
+                measurements[i]["posture"] = "incorrect"
+
+        return MeasurementCollection(measurements=measurements)
