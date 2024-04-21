@@ -18,6 +18,7 @@ class MeasurementModel(BaseModel):
 
     values: MeasurementValuesModel = Field(default_factory=MeasurementValuesModel)
 
+    posture: str | None = Field(default=None)
     time_difference: int = Field(default=0)
 
     owner: str

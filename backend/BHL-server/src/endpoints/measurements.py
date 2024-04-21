@@ -47,5 +47,13 @@ async def post_measurement(measurement: MeasurementPostModel,
 async def list_measurements(page: int = 0, size: int = 1000):
     print(f"page: {page}, size: {size}")
     measurements = await measurements_collection.find().sort("timestamp", -1).skip(page*size).limit(size).to_list(size)
-    # measurements['posture']
+    for i in range(len(measurements)):
+        if not measurements[i]["values"]["seated"]:
+            measurements[i]["posture"] = "break"
+        elif measurements[i]["values"]["backrest"] and measurements[i]["values"]["backrest"]:
+            measurements[i]["posture"] = "correct"
+        else:
+            measurements[i]["posture"] = "incorrect"
+
+
     return MeasurementCollection(measurements=measurements)
