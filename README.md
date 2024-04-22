@@ -10,7 +10,7 @@ Currently, one of the main problems facing contemporary employees is mental heal
 - Accelerometer
 - Strain Gauge
 ---
-- Server built with FastAPI, storing user data about their postures and points earned
+- Server built with FastAPI and mongoDB, storing data about users' postures and points earned
 - Raspberry Pi communicates with our server using HTTP protocol
 - Mobile application built in Flutter technology retrieves data from the server also using HTTP protocol
 
