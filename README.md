@@ -1,4 +1,4 @@
-# Back Buddy - Project created for 24h Hackathon Best Hacking League (1st place in category Hardware)
+# Back Buddy - Project created during 24h Hackathon Best Hacking League (1st place in category Hardware)
 ![app](https://github.com/muxonn/best-hacking-league-2024/assets/40025452/eb32e203-4445-4218-8a17-a278733aba8d)
 
 ## Our Goals
