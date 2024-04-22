@@ -27,6 +27,7 @@ Currently, one of the main problems facing contemporary employees is mental heal
 - Possibility to calibrate any chair
 - Haptics in both armrests for better feedback
 - Built-in notifications in the application informing about more precise posture issues
+- Measuring the distance of the eyes from the monitor
 
 <p align="center">
   <img src="https://github.com/muxonn/best-hacking-league-2024/assets/40025452/6f4ea75c-35d9-4b79-8f26-ff7c2c0a06cb" alt="logo-transparent">
