@@ -16,9 +16,8 @@ class SeatSensor:
     def get_position(self):
         range = self._accelerometer.range
 
-        if range < 100:
-            return Position.CLOSE
-        elif range < 300:
-            return Position.FAR
+        if range < 1000:
+            return True
         else:
-            return Position.BREAK
+            return False
+
