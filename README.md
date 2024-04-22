@@ -1,5 +1,9 @@
-# Back Buddy - Project created during 24h Hackathon Best Hacking League (1st place in category Hardware)
+# Back Buddy - Project created during Best Hacking League 24h Hackathon(1st place in the hardwar category)
 ![app](https://github.com/muxonn/best-hacking-league-2024/assets/40025452/eb32e203-4445-4218-8a17-a278733aba8d)
+
+<p align="center">
+  <img width="460" src="https://github.com/muxonn/best-hacking-league-2024/assets/40025452/eb32e203-4445-4218-8a17-a278733aba8d">
+</p>
 
 ## Our Goals
 Currently, one of the main problems facing contemporary employees is mental health, often exacerbated by the depressing work environment. We wanted to create a tool that could make the office space more engaging and, above all, healthier! We understand how often physical health is linked to good well-being, which is why we came up with the idea of a system monitoring sitting posture using **a strain gauge, accelerometer, and Time-of-Flight (TOF) sensors**. Employees can monitor their posture **on a dedicated mobile application, with elements of gamification between coworkers,** or receive alerts about incorrect posture through vibrations in the armrest.
@@ -12,7 +16,7 @@ Currently, one of the main problems facing contemporary employees is mental heal
 ---
 - Server built with FastAPI and mongoDB, storing data about users' postures and points earned
 - Raspberry Pi communicates with our server using HTTP protocol
-- Mobile application built in Flutter technology retrieves data from the server also using HTTP protocol
+- Mobile application built with Flutter retrieves data from the server also using HTTP protocol
 
 ## Strengths of Our Solution
 - Limiting stimuli - vibrations instead of notifications
