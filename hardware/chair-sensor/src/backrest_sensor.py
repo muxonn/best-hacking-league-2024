@@ -6,7 +6,7 @@ import adafruit_adxl34x
 class BackrestSensor:
 
     _empty_chair_position = 1
-    _trigger_offset = 1
+    _trigger_offset = 0.3
 
     def __init__(self, i2c):
         self._accelerometer = adafruit_adxl34x.ADXL345(i2c)
