@@ -1,5 +1,5 @@
 # Back Buddy - Project created during Best Hacking League 24h Hackathon (1st place in the hardware category)
-#YouTube video: https://youtu.be/4osGzpCa8mc
+
 
 <p align="center">
   <img width="460" src="https://github.com/muxonn/best-hacking-league-2024/assets/40025452/eb32e203-4445-4218-8a17-a278733aba8d">
