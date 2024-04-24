@@ -1,4 +1,4 @@
-# Back Buddy - Project created during Best Hacking League 24h Hackathon (1st place in the hardware category)
+# Back Buddy - Project created during Best Hacking League 24h hackathon (1st place in the hardware category)
 
 [YouToube video link](https://youtu.be/4osGzpCa8mc)
 
